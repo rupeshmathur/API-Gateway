@@ -10,7 +10,7 @@ spring:
         webflux:
           routes:
             - id: notification-service
-              uri: http://98.84.107.218:8082/
+              uri: http://54.147.2.212:8082/
               predicates:
                - Path=/api/notifications/**
               filters:
