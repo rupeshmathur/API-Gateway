@@ -38,9 +38,9 @@ public class SecurityConfig {
 
     @Bean
     public CorsWebFilter corsWebFilter() {
-
+System.out.println("http://"+ EC2_IP_ADDRESS +":8080");
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("http://"+ EC2_IP_ADDRESS +":8080");
+        corsConfiguration.addAllowedOriginPattern("http://"+ EC2_IP_ADDRESS +":8080");
         corsConfiguration.addAllowedHeader("*");
         corsConfiguration.addAllowedMethod("*");
         corsConfiguration.setAllowCredentials(true);
